@@ -1,0 +1,353 @@
+
+.row{
+    text-align: left;
+    color:calc();
+    font-size: 37px;
+}
+.row1{
+    background-color:#0c2e8a;
+    max-block-size: 50px;
+}
+
+#navbar {
+    overflow: hidden;
+    background-color:white;
+    height: 60px;
+}
+
+#navbar a {
+    display:inline;
+    color:black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 34px;
+    margin-left: 80px;
+    padding-top: 10px;
+}
+
+#navbar a:hover{
+  
+    color:lightgreen;
+}
+
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+ li{
+     display: inline; 
+    text-decoration: none;   
+}
+li :hover{
+    color: blue;
+    background-color: rgb(220,220,220);
+}
+li ::selection{
+    color: rgb(78, 78, 85);
+}
+a{
+    margin-left: 40px;
+    color: black;
+    text-decoration: none;
+    color: #747474   
+} 
+ul{
+    margin: 30px 5px 0px 0px;
+    font-size: 25px;
+    text-transform: uppercase;
+}
+
+.home{
+    font-size: 40px;
+    margin-left: 80px;
+    color:white;
+    text-transform: uppercase;
+}
+.col-sm-6{
+    font-size: 60px;
+    color: #0c2e8a;
+    /* margin-left: 60px; */
+    text-align: center;
+}
+#line{
+    border: 0.3px solid black;
+    margin-bottom: 0.1px;
+    margin-top: 0px;
+}
+.upper-right{
+    font-size: 10px;
+    color: black;
+}
+.para3{
+    color:black;
+    font-family: sans-serif;
+}
+.para4{
+    margin: 0px 0px 0px 30px;
+    font-size: 20px;
+    font-family: sans-serif;
+}
+.image{
+    max-width:10%;
+    height: auto;
+}
+.title{
+    font-size: 30px; 
+    font-family: sans-serif; 
+}
+.para{
+    font-size: 20px;
+    font-family: sans-serif;
+}
+.container{
+    background-color:white;
+    height: 30px;
+    width:1000px;
+/* grid-template-columns:repeat(3,1fr);
+grid-template-rows:repeat(3,1fr); */
+}
+.item{
+    background-color: white;
+    height: 1000px;
+    width: 1000px;
+}
+.item1{
+    grid-column-start: 1;
+    grid-column-end: 3;
+    margin:-990px 0px 0px 500px ;
+}
+.details{
+    font: 20px  black bold  ;
+    font-family: sans-serif;
+}
+#image6{
+    max-width:10%;
+    height: auto;
+    margin: -325px 0px 0px 850px;
+    background-color: tomato;
+}
+#image7{
+    max-width:10%;
+    height: auto;
+    margin: -310px 0px 0px 1000px;
+    background-color: skyblue;
+}
+.list{
+    list-style-type: square;
+}
+ul.b {
+    list-style-type: circle;
+}
+#imagestyle{
+    margin:-300px 0px 0px 600px;
+    width: 400px;
+}
+.titleStyle{
+    border: solid;
+    margin: 0px 100px 0px 100px;
+}
+.ApplyNow{
+    width: 100px; height: 30px;
+    font-size: 15px;
+    border-radius: 12px;
+    margin: -20px 0px 10px 0.5px;
+    cursor: pointer;
+    background-color: #0c2e8a;
+    color: white;
+}
+.formstyle{
+    border: ridge 2px black ;
+    font: 25px bold;
+    color: darkslateblue;
+    margin: 40px 0px 0px 320px;
+    width: 600px;
+}
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+.footer{
+	background-color: #24262b;
+    height: 200px;
+}
+.container1{
+	max-width: 1170px;
+	margin:auto;
+}
+/* .row2{
+	display:inline;
+} */
+/* .footer-col{
+   width: 25%;
+   padding: 0 15px;
+} */
+.footer-col h4{
+	font-size: 30px;
+	color: #ffffff;
+	text-transform: capitalize;
+	margin:100px 0px 0px 500px;
+	font-weight: 500;
+	position: relative;
+}
+/* .footer-col h4::before{
+	content: '';
+	position: absolute;
+	left:0;
+	bottom: -10px;
+	background-color: #e91e63;
+	height: 2px;
+	box-sizing: border-box;
+	width: 50px;
+} */
+.footer-col .social-links a{
+	display:inline-block;
+	height: 40px;
+	width: 40px;
+	background-color: rgba(255,255,255,0.4);
+	margin:50px 0px 10px 200px;
+	text-align: center;
+	line-height: 90px;
+	border-radius: 50%;
+	color: #ffffff;
+/* 	transition: all 0.5s ease;
+ */}
+.footer-col .social-links a:hover{
+	color: blue;
+	background-color: #ffffff;
+}
+
+/*responsive*/
+@media(max-width: 767px){
+  .footer-col{
+    width: 50%;
+    margin-bottom: 30px;
+}
+}
+@media(max-width: 574px){
+  .footer-col{
+    width: 100%;
+}
+}
+
+.animation{
+    animation-duration: 3s;
+    animation-name: slidein;
+}
+
+@keyframes slidein {
+    from {
+      margin-left: 100%;
+      width: 300%;
+    }
+  
+    to {
+      margin-left: 50%;
+      width: 100%;
+    }
+}
+.animation1{
+        animation-name: moveRight;
+        animation-duration:0.5s;
+    }
+
+@keyframes moveRight {
+        from {
+          transform: translateX(-10px);
+        }
+        to {
+          transform: translateX(10px);
+        }
+      }
+
+
+.animation2{
+        animation-duration: 3s;
+        animation-name: slidein;
+    }
+    
+    @keyframes slidein {
+        from {
+          margin-left: 100%;
+          width: 300%;
+        }
+      
+        to {
+          margin-left: 30%;
+          width: 100%;
+        }
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* @media screen and (min-width: 900px) {
+    .mainNav{
+        display: inline;
+    }
+    .mainNav2{
+        display: none;
+    }
+}
+@media screen and (max-width: 899px) {
+    .mainNav{
+        display: none;
+    }
+    .mainNav2{
+        display: block;
+    }
+}
+ */

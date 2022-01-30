@@ -1,0 +1,158 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <script>
+        function executeContact(){
+        var _name = document.getElementById("name").value;
+        alert("NAME: " + _name);
+        var _email = document.getElementById("email").value;
+        alert("email" + _email );
+        var _Contact = document.getElementById("Contact").value;
+        alert("contact" + _Contact );
+
+        var _Subject = document.getElementById("Subject").value;
+        alert("_Subject: " + _Subject);
+        var _Messege = document.getElementById("Messege").value;
+        alert("_Messege" + _Messege);
+        var _str = _name + " " + _email + " " + _Contact-Us + " " + _Subject + " " + _Messege; 
+         if(_name == "" || _email == "" || _Contact-Us == "" || _Subject == "" || _Messege == ""){
+          alert("Please enter all the details before submitting"); 
+          return;
+        }
+        alert("HERE");
+
+        $.ajax({
+            method: "POST",
+            url: "http://localhost/Contact.php",
+            data: { 
+                name: _name,
+                email: _email,
+                Contact: _Contact,
+                Subject: _Subject,
+                Messege: _Messege,
+            }
+          })
+            .done(function( response ) {
+
+            });
+            window.close();
+            window.open("Main.html");    
+            
+    }
+
+      </script>
+
+</head>
+<body>
+    <div class="row">
+        <div class="col-sm-6">
+        Vartak Software
+
+    </div>
+    </div>
+    <hr id="line">
+    <div id="navbar">
+        <a href="Main.html"> Home </a>
+        <a href="Aboutus.html"> About Us</a>
+        <a href="Services.html"> Services </a>
+        <a href="internship.html"> Internship </a>
+        <a href="Contact-Us.html"> Contact Us </a>
+    </div>
+
+       <div class="row1">
+        <div class="para animation" style="font-size: 40px; margin-left: 500px;color:white; text-transform: uppercase; "> 
+             Contact-Us
+        </div> 
+        
+        
+
+        <div class="formstyle" style="border:0px;margin-left: 600px;">
+            <!-- action="http://localhost/action.php" -->
+           <form id="Apply2" method="post" >
+               <h1  style="font-size: 30px; margin-left: -170px;color: black;">Get In Touch With Vartak Software </h1>
+ 
+
+               
+             <!-- <label for="Name" style="margin: 100px 0px 0px 100px;"> Name</label>
+             <br> -->
+               <input type="text" name="name" id="name"  placeholder="Your Name" style="width: 550px ;height: 50px;  margin:40px 0px 0px -550px" pattern="[a-zA-Z\s]+" required><br>
+      
+               <!-- <label for="EmailID" style="margin:-0px 100px 0px 0px;"> EmailID</label> -->
+              <br>
+              <input type="email" name="email" id="email" placeholder="Your Email" style="width: 550px ;height: 50px; margin:-80px 0px 0px 50px" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required/><br>
+       
+               <!-- <label for="Contact-Us" style="margin: 0px 0px 0px 10px;">Contact-Us-No</label> -->
+              <br>
+              <input type="tel" name="Contact" id="Contact" placeholder="Your Mobile Number" style="width: 550px ;height: 50px;  margin:-20px 0px 0px -550px" pattern="[0-9]{10}" required />
+      
+              <br>
+
+              <!-- <label for="subject" style="margin: 0px 0px 0px 10px;">Select subject</label> -->
+        <br>
+        <select id="Subject" name="Subject" style="width: 550px ;height: 50px; font-size: 15px;margin:-80px 0px 0px 50px">
+            <option value="" selected > What are you looking for? </option>
+            <option value="SoftwareDevelopment">Software Development</option>
+            <option value="MobileAppDevelopment">Mobile App Development</option>
+            <option value="UI/UXDesign">UI/UX Design</option>
+            <option value="StartupConsulting" >Startup Consulting</option>
+            <option value="Other"> Other</option>
+          </select>
+        <br>       <br>
+
+        <!-- <label for="Messege" style="margin: 0px 0px 0px 10px;">Your Messege</label> -->
+        <br>
+        <input type="text" name="Messege" id="Messege"  placeholder="Your Messege" style="width: 1150px ;height: 160px; margin:-40px 0px 0px -550px" required/>
+        <br> 
+
+        <button type ="submit"  name="send" id="send" style="border:2px solid; width: 120px;height: 30px;margin:60px 0px 0px -20px ;" value="send" onclick="executeContact()"> Send Messege
+            </button>
+
+            
+          </form>
+              </div>
+
+    </div>
+    </div>
+
+    <footer class="footer" style="margin: 700px 0px 0px 0px;">
+      <div class="container1">
+          <div class="row2">
+              <div class="footer-col">
+                  <h4>follow us</h4>
+                  <div class="social-links">
+                      <a href="https://www.facebook.com/Meta/"><i class="fab fa-facebook-f"></i></a>
+                      <a href="https://twitter.com/Twitter?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"><i class="fab fa-twitter"></i></a>
+                      <a href="https://www.instagram.com/instagram/?hl=en" onMouseOver="this.style.color='red'"
+                      onMouseOut="this.style.color='white'"><i class="fab fa-instagram"></i></a>
+                      <a href="https://business.linkedin.com/marketing-solutions/cx/21/11/linkedin-pages?trk=sem_lms_gaw&src=go-pa&veh=LMS-S_APAC_IN_High_EN_SEM_SEM_GoogleAds_NA_ALL_NA_NA_Core_SelfServeLP_Pages_Brand_Phrase_545685407688__linkedin%20pages_c__kwd-344541001411_14649643622&mcid=6843969601940799581&cname=LMS-S_APAC_IN_High_EN_SEM_SEM_GoogleAds_NA_ALL_NA_NA_Core_SelfServeLP_Pages_Brand_Phrase&camid=14649643622&asid=127700672832&targetid=kwd-344541001411&crid=545685407688&placement=&dev=c&ends=1&gclid=CjwKCAiA866PBhAYEiwANkIneNjOAf2wh6GNGD8fOuf91Xl4eKZbU-CEXeGZzvN44rJH9HG6QiTypRoCFGAQAvD_BwE&gclsrc=aw.ds"><i class="fab fa-linkedin-in"></i></a>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </footer>
+  <script>
+    window.onscroll = function() {myFunction()};
+
+    var navbar = document.getElementById("navbar");
+    var sticky = navbar.offsetTop;
+
+    function myFunction() {
+        if(window.pageYOffset >= sticky) {
+            navbar.classList.add("sticky");
+        } else {
+            navbar.classList.remove("sticky");
+        }
+    }
+</script>
+
+
+
+</body>
+</html>

@@ -1,0 +1,124 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deatils</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+</head>
+<body>
+    <div class="formstyle animation1">
+      <!-- action="http://localhost/action.php" -->
+     <form id="Apply" method="post" >
+       <h1 style="font-size: 40px; margin-left: 200px;">Apply For Internship</h1>
+       <label for="Name" style="margin: 0px 0px 0px 10px;"> Name</label>
+       <br>
+        <input type="text" name="name" id="name" style="width: 400px ;height: 30px;  margin-left: 10px;" pattern="[a-zA-Z\s]+" required><br>
+
+        <label for="EmailID" style="margin: 0px 0px 0px 10px;"> EmailID</label>
+        <br>
+        <input type="email" name="email" id="email" style="width:400px;height: 30px; margin-left: 10px;" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required/><br>
+
+        <label for="Contact-Us" style="margin: 0px 0px 0px 10px;">Contact No</label>
+        <br>
+        <input type="tel" name="Contact-Us" id="Contact-Us" style="width: 400px ;height: 30px;  margin-left: 10px;" pattern="[0-9]{10}" required />
+
+        <br>
+
+        <label for="Address" style="margin: 0px 0px 0px 10px;">Address</label>
+        <br>
+        <input type="text" name="Address" id="Address"  style="width: 400px ;height: 70px; margin-left: 10px;" required/>
+        <br>
+
+        <label for="Qualification" style="margin: 0px 0px 0px 10px;">Choose your Qualification</label>
+        <br>
+        <select id="Qualification" name="Qualification" style="width: 400px ;height: 30px; font-size: 15px;margin-left: 10px;">
+            <option value="" selected > Select your qualification </option>
+            <option value="BCA">BCA</option>
+            <option value="BE">BE</option>
+            <option value="MCA">MCA</option>
+            <option value="B.Tech." >B.Tech</option>
+            <option value="M.Tech.">M.Tech</option>
+            <option value="B.Sc.(IT)">B.Sc(IT)</option>
+            <option value="M.Sc.(IT)">M.Sc(IT)</option>
+            <option value="Diploma"> Diploma</option>
+            <option value="Other"> Other</option>
+          </select>
+          <br>
+
+          <label for="Internship" style="margin: 0px 0px 0px 10px;">
+            Choose  Technology for Internship</label>
+        <br>
+        <select id="Internship" name="Internship" style="width: 400px ;height: 30px; font-size: 15px;margin-left: 10px;">
+            <option value="" selected > Select technology </option>
+            <option value="Android">Android</option>
+            <option value="PHP">PHP</option>
+            <option value="Java">Java</option>
+            <option value=".NET" >.NET</option>
+            <option value="Software Testing">Software-Testing</option>
+            <option value="SAP">SAP</option>
+          </select>
+        <br>       <br>
+
+
+        <button type ="submit" id="registerBtn" style="border:2px solid; width: 80px;height: 30px; margin-left: 10px;" value="Submit" onclick="execute()"> 
+        Register
+        </button> 
+        <script>
+          function execute(){
+          var _name = document.getElementById("name").value;
+          var _email = document.getElementById("email").value;
+          var _Contact = document.getElementById("Contact-Us").value;
+          var _address = document.getElementById("Address").value;
+          var _qualification = document.getElementById("Qualification").value;
+          var_Internship=document.getElementById("Internship").value
+          var _str = _name + " " + _email + " " + _Contact-Us + " " + _address + " " + _qualification + " " + _Internship;
+          if(_name == "" || _email == "" || _Contact-Us == "" || _address == "" || _qualification == "" | _Internship==""){
+            alert("Please enter all the details before submitting");
+            return;
+          }
+          
+          $.ajax({
+              method: "POST",
+              url: "http://localhost/action.php",
+              data: { 
+                  name: _name,
+                  email: _email,
+                  Contact: _Contact,
+                  Address: _address,
+                  Qualification: _qualification,
+                  Internship:_Internship
+              }
+            })
+              .done(function( response ) {
+
+              });
+              window.close();
+              window.open("Main.html");    
+              
+      }
+
+        </script>
+
+    </form>
+  </div>
+  <script>
+    window.onscroll = function() {myFunction()};
+
+    var navbar = document.getElementById("navbar");
+    var sticky = navbar.offsetTop;
+
+    function myFunction() {
+        if(window.pageYOffset >= sticky) {
+            navbar.classList.add("sticky");
+        } else {
+            navbar.classList.remove("sticky");
+        }
+    }
+</script>
+    
+
+</body>
+</html>

@@ -1,0 +1,59 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+</head>
+<body>
+    <div class="row">
+        <div class="col-sm-6">
+        <h1>Vartak Software</h1>
+    </div>
+    </div>
+    <div id="navbar">
+        <a href="Main.html"> Home </a>
+        <a href="Aboutus.html"> About Us</a>
+        <a href="Services.html"> Services </a>
+        <a href="internship.html"> Internship </a>
+        <a href="Contact-Us.html"> Contact Us </a>
+    </div>
+
+      <footer class="footer">
+        <div class="container1">
+            <div class="row2">
+                <div class="footer-col">
+                    <h4>follow us</h4>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/Meta/"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://twitter.com/Twitter?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.instagram.com/instagram/?hl=en" onMouseOver="this.style.color='red'"
+                        onMouseOut="this.style.color='white'"><i class="fab fa-instagram"></i></a>
+                        <a href="https://business.linkedin.com/marketing-solutions/cx/21/11/linkedin-pages?trk=sem_lms_gaw&src=go-pa&veh=LMS-S_APAC_IN_High_EN_SEM_SEM_GoogleAds_NA_ALL_NA_NA_Core_SelfServeLP_Pages_Brand_Phrase_545685407688__linkedin%20pages_c__kwd-344541001411_14649643622&mcid=6843969601940799581&cname=LMS-S_APAC_IN_High_EN_SEM_SEM_GoogleAds_NA_ALL_NA_NA_Core_SelfServeLP_Pages_Brand_Phrase&camid=14649643622&asid=127700672832&targetid=kwd-344541001411&crid=545685407688&placement=&dev=c&ends=1&gclid=CjwKCAiA866PBhAYEiwANkIneNjOAf2wh6GNGD8fOuf91Xl4eKZbU-CEXeGZzvN44rJH9HG6QiTypRoCFGAQAvD_BwE&gclsrc=aw.ds"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+   </footer>
+
+   <script>
+    window.onscroll = function() {myFunction()};
+
+    var navbar = document.getElementById("navbar");
+    var sticky = navbar.offsetTop;
+
+    function myFunction() {
+        if(window.pageYOffset >= sticky) {
+            navbar.classList.add("sticky");
+        } else {
+            navbar.classList.remove("sticky");
+        }
+    }
+</script>
+
+</body>
+</html>
